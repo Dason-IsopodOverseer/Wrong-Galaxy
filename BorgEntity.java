@@ -4,7 +4,7 @@ public class BorgEntity extends EnemyEntity {
 	
     public BorgEntity(final Game g, final String r, final int newX, final int newY) {
         super(g, r, newX, newY, 50);
-        moveSpeed = 35;
+        moveSpeed = 25;
         
      	// set queen attributes
         if (r.equals("queen")) {

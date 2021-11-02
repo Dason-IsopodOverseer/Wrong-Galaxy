@@ -25,7 +25,7 @@ public class TileMap {
 		a = (SpriteStore.get()).getSprite("sprites/a.png");
 		b = (SpriteStore.get()).getSprite("sprites/b.png");
 		c = (SpriteStore.get()).getSprite("sprites/c.png");
-		n = (SpriteStore.get()).getSprite("sprites/n.gif");
+		n = (SpriteStore.get()).getSprite("sprites/n.png");
 		fillMap();
 	}
 	
@@ -68,9 +68,6 @@ public class TileMap {
 				} else if (ch == 'k') {
 					tiles[x][y] = null;
 					game.entities.add(new KlingonEntity(game, "kling", (x * tileSize), (y * tileSize)));
-				} else if (ch == 'w') {
-					tiles[x][y] = null;
-					game.entities.add(new KlingonEntity(game, "warrior", (x * tileSize), (y * tileSize)));
 				} else if (ch == 'm') {
 					tiles[x][y] = null;
 					game.entities.add(new KlingonEntity(game, "master", (x * tileSize), (y * tileSize)));

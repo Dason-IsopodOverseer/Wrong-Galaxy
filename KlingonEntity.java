@@ -7,16 +7,11 @@ public class KlingonEntity extends EnemyEntity {
     public KlingonEntity(final Game g, final String r, final int newX, final int newY) {
         super(g, r, newX, newY, 50);
         type = r;
-        dx = 50;
+        dx = 0;
         
         // set health
-        // warriors and masters do not move until player comes near
-        if (type.equals("warrior")) {
-        	health = 2;
-        	dx = 0;
-        } else if (type.equals("master")) {
+        if (type.equals("master")) {
         	health = 3;
-        	dx = 0;
         }
     }
     
@@ -40,14 +35,16 @@ public class KlingonEntity extends EnemyEntity {
     		jumping = false;
     		jumpCount = 0;
     	}
-    	
-    	
-    	/* warriors and dahar masters chase after player
+
+    	/* klingons chase after player, masters can jump
     	 * this checks to see if luke is within the enemy's sight
     	 */
     	if (!beingPushed) {
-	    	if (game.luke.getY() + 200 >= y && type != "kling") {
-	    		dx = 80;
+	    	if (game.luke.getY() + 200 >= y) {
+	    		dx = 40;
+	    		if (type.equals("master")) {
+	    			dx *= 1.5;
+	    		}
 	    		
 	    		if (game.luke.getX() < x) {
 	        		dx *= -1;

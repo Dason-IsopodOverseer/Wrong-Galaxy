@@ -350,7 +350,7 @@
       *       that extends this class
       */
       public abstract void collidedWith(Entity other); {
-    	  System.out.println();
+    	  // System.out.println();
       }
 
  } // Entity class
