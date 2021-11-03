@@ -5,7 +5,7 @@ public class TileMap {
 
 	private Sprite[][] tiles;
 	public ArrayList<String> tileConfig = new ArrayList(); // stores the configuration of different tiles after being read by mapReader
-	private Sprite a, b, c, d, e, f, g, n;
+	private Sprite tileSprite[] = new Sprite[6];
 	private Game game;
 	private int height = 0; // stores the height of the map
 	private int width = 0; // stores the width of the map
@@ -22,10 +22,9 @@ public class TileMap {
 		tiles = new Sprite[width][height];
 		
 		// set sprites a and b to corresponding tile images
-		a = (SpriteStore.get()).getSprite("sprites/a.png");
-		b = (SpriteStore.get()).getSprite("sprites/b.png");
-		c = (SpriteStore.get()).getSprite("sprites/c.png");
-		n = (SpriteStore.get()).getSprite("sprites/n.png");
+		for (int i = 0; i < 6; i++) {
+			tileSprite[i] = (SpriteStore.get()).getSprite("sprites/" + i + ".png");
+		}
 		fillMap();
 	}
 	
@@ -58,13 +57,13 @@ public class TileMap {
 	            
 	            // check if the char represents tile A, B, N, etc.
 				if (ch == 'A') {
-					tiles[x][y] = a;
+					tiles[x][y] = tileSprite[1];
 				} else if (ch == 'B') {
-					tiles[x][y] = b;
+					tiles[x][y] = tileSprite[2];
 				} else if (ch == 'C') {
-					tiles[x][y] = c;
+					tiles[x][y] = tileSprite[3];
 				} else if (ch == 'N') {
-					tiles[x][y] = n;
+					tiles[x][y] = tileSprite[0];
 				} else if (ch == 'k') {
 					tiles[x][y] = null;
 					game.entities.add(new KlingonEntity(game, "kling", (x * tileSize), (y * tileSize)));
@@ -93,7 +92,7 @@ public class TileMap {
         try {
         	
         	// input
-            String folderName = "/maps/";
+            String folderName = "maps/";
             String resource = tileFile;
 
 			// this is the path within the jar file
@@ -120,7 +119,7 @@ public class TileMap {
 		        	
 		        	// * makes an entire row empty
 		        	if (line.startsWith("*")) {
-		        		line = "                                "; // 24 spaces
+		        		line = "                            "; // 28 spaces
 		        	}
 		            tileConfig.add(line);
 		            

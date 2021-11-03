@@ -6,10 +6,10 @@
 TILE NOTATION
 A = normal borg tile
 B = green borg tile
-C = corner borg tile
-D = normal kling tile
+C = fancy borg tile
+D = normal klingon tile
 E = red kling tile
-F = corner kling tile
+F = fancy kling tile
 
 ENEMY NOTATION
 b = borg enemy

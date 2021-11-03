@@ -10,10 +10,10 @@ AAAAAAAAAAAAAAAAAAAAA    AAA
 *
 *
                  BAAABABBBAA
-               AAAABAAA bAAA
-             BBBAAABBA    AA
-           BBBAAABAAABA  BAA
-         BBAAABAAABAAABAAABA
+               AAAABAACCCCAA
+             BBBAAABBAC bCAA
+           BBBAAABAAABC  CAA
+         BBAAABAAABAAACCCCBA
        BAAABAAABAAABAAABAAAB
      AAAAAAAAAAAAAAAAAAAAAAA
           BB                

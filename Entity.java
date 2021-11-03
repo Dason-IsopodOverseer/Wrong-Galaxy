@@ -328,13 +328,13 @@
       */
      public boolean lightsaberHit(Entity other, boolean isFacingRight) {
      	boolean hit = false;
-     	if (bottom + 5 > other.bottom && top - 5 < other.top) {
+     	if (bottom + 20 > other.bottom && top - 20 < other.top) {
      		if (isFacingRight) {
-         		if (other.left <= right + 30 && other.left > left + 10) {
+         		if (other.left <= right + 40 && other.left > left + 10) {
          			hit = true;
          		}
          	} else {
-         		if (other.right >= left - 30 && other.right < left - 10) {
+         		if (other.right >= left - 40 && other.right < left - 10) {
          			hit = true;
          		}
          	}

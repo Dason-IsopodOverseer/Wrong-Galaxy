@@ -61,7 +61,7 @@ public class Game extends Canvas {
     
     private TileMap map = new TileMap("level1.txt", this);
     
-    public final int GAMEWIDTH = tileSize * map.getWidth(); // width of game window in px 
+    public final int GAMEWIDTH = 1400; // width of game window in px 
     public final int GAMEHEIGHT = 900; // height of game window in px
     private int levelHeight = 0; // height of the first "level" of the game
     
@@ -576,6 +576,7 @@ public class Game extends Canvas {
 		}
 		else if (lvl == 2) {
 			map = new TileMap("level2.txt", this);
+			System.out.println(map.getHeight());
 			levelHeight = map.getHeight() * tileSize;
 			for (int i = 0; i < entities.size(); i++) {
 				entities.get(i).setMap();
