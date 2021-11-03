@@ -1,20 +1,36 @@
-     AAAAAAAAAAAAAAAAAAAAAAAAAAA
-       BBBA                     
-       AAAA                     
-AABB      A     b               
-         BA    AAA           b  
-A         A                 AAA 
-AAB   AAAAA                     
-BBBA  BB BA      b b            
-BBB B     A    CCCCCCC          
-A         A                     
-BBBBBBB  AA                     
-          A                     
-B       AAA                b    
-B        AA              CCCCC  
-A        AA                     
-BB       BA                     
-BB   BAAAAAAAAAAAAAABAABABAAAABB
-A         AAAAAAB BAAAB BAAAB BA
-BBB     AAAAAAAAAbAAAAAbAAABAbAA
-AAAAAAANAAAAAAAAAAAAAAAAAAAAAAAA
+*
+*
+     AAAAAAAAAAAAAAAA  AAAAA
+     BBBBBBBBBBBBBAAA  BBBBB
+*
+*
+B            b              
+BBBBBBBBBBBBBBBBB AAA  BBBBB
+*
+B                           
+AAAAAAAAAA  AAAAAAAAA BBBBBB
+BBBBBBBBBB        AAABBBBBBB
+AAAAAAAAAA        AAA  BBBBB
+BBBBBBBBBBBBBBBBB AAA  BBBBB
+*
+*
+            b               
+AAAAAAAAAAAAAAAA A          
+*
+*
+AAA  AAAAAAAAAAAAAAAAAAAAAAA
+AAA  BBBBBBBBBBBBBBBBBBBBBBB
+*
+*
+B            b              
+BBBBBBBBBBBBBBBBB BBBBBBBBBB
+*
+B                           
+AAAAAAAAAA  AAAAAA AAAAAAAAA
+BBBBBBBBBB                  
+AAAAAAAAAAAAA       AAAAAAAA
+BBBBBBBBBBBBBBBBB   AAAAAAAA
+*
+*
+            b               
+AAAAAAAAAAAAAAAANAAAAAAAAAAA

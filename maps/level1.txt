@@ -1,45 +1,60 @@
-# Map file for tile-based game
-# (Lines that start with '#' are comments)
-# (Lines that start with '*' are filled with spaces)
-# (Space) Empty tile
-# A..Z Tiles A through Z
-# b = borg enemy
-# k = klingon enemy
-# WHEN WRITING NEW LEVELS, DO NOT USE TAB FOR SPACES!
-# MAKE SURE NO ROGUE SPACES, OR ELSE GAME BREAKS!!!
 *
 *
-     AAAAAAAAAAAAAAAA  AAAAAAABA
-     BBBBBBBBBBBBBAAA  BBBBBBBAB
 *
 *
-B            b              k   
-BBBBBBBBBBBBBBBBB AAA  BBBBBBBAB
 *
-B                               
-AAAAAAAAAA  AAAAAAAAA BBBBBBBBB 
-BBBBBBBBBB        AAABBBBBBBBBBB
-AAAAAAAAAA        AAA  BBBBBBBBB
-BBBBBBBBBBBBBBBBB AAA  BBBBBBBBB
+AAAAAAAAAAAAA   AAAAAAAAAAAA
 *
 *
-            b                   
-AAAAAAAAAAAAAAAA A             A
+AAAAAAAAAAAAAAAAAAAAA    AAA
 *
 *
-AAA  AAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAA  BBBBBBBBBBBBBBBBBBBBBBBBBBB
+                 BAAABABBBAA
+               AAAABAAA bAAA
+             BBBAAABBA    AA
+           BBBAAABAAABA  BAA
+         BBAAABAAABAAABAAABA
+       BAAABAAABAAABAAABAAAB
+     AAAAAAAAAAAAAAAAAAAAAAA
+          BB                
+          BB    b           
+AAAA      BB                
+          BB   AAA     b    
+      AAAABB                
+          BB     b    AAA   
+AAAA      BB                
+          BB    AAA         
+          BB           b    
+       AAABB                
+          BB    b     AAA   
+AAAA     ABB                
+         ABB   AAA          
+A        ABB                
+BB       BBB                
+BB   BAAABBBAAAAAAAABAABABAA
+A        BBBAAAA b BAAB b AA
+BBB     ABBBAAAA   AAAA   AB
+AAAAAA  AAAAAAAAAAAAAAAAAAAA
 *
 *
-B            b                  
-BBBBBBBBBBBBBBBBB BBBBBBBBBBBBBB
-*
-B                               
-AAAAAAAAAA  AAAAAA AAAAAAAAAAAAA
-BBBBBBBBBB                      
-AAAAAAAAAAAAA       AAAAAA   AAA
-BBBBBBBBBBBBBBBBB   AAAAAAA AAAA
+                        A   
 *
 *
-            b                   
-AAAAAAAAAAAAAAAANAAAAAAAAAAAAAAA
+A                           
+*
+*
+      A	                    
+*
+*
+*
+*
+*
+            A               
+*
+*
+   A               A        
+*
+       A        A          A
+ A           A          A   
+AAAA    A            A    A 
+AAAAAAAAAAAAAANNNAAAAAAAAAAA

@@ -1,16 +1,16 @@
 public class KlingonEntity extends EnemyEntity {
-    private String type = "";
+    private boolean isMaster = false;
     private byte count = 0;
     private boolean jumping = false;
     private int jumpCount = 0;
 	
     public KlingonEntity(final Game g, final String r, final int newX, final int newY) {
         super(g, r, newX, newY, 50);
-        type = r;
         dx = 0;
         
-        // set health
-        if (type.equals("master")) {
+     	// set dahar master attributes
+        if (r.equals("master")) {
+        	isMaster = true;
         	health = 3;
         }
     }
@@ -42,7 +42,7 @@ public class KlingonEntity extends EnemyEntity {
     	if (!beingPushed) {
 	    	if (game.luke.getY() + 200 >= y) {
 	    		dx = 40;
-	    		if (type.equals("master")) {
+	    		if (isMaster) {
 	    			dx *= 1.5;
 	    		}
 	    		
@@ -51,7 +51,7 @@ public class KlingonEntity extends EnemyEntity {
 	    		}
 	    		
 	    		// configure additional movements depending on type of enemy
-	    		if (type.equals("master") && count >= 100 && this.isTileBelow(delta)) {
+	    		if (isMaster && count >= 100 && this.isTileBelow(delta)) {
 	        		dy = -400;
 	        		jumping = true;
 	        	}
