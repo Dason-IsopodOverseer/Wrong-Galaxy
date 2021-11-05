@@ -1,15 +1,25 @@
-# Map file for tile-based game
-# (Lines that start with '#' are comments)
-# (Lines that start with '*' are filled with spaces)
-# (Space) Empty tile
+Map file for tile-based game
+(Lines that start with '#' are comments)
+(Lines that start with '*' are filled with spaces)
+(Space) Empty tile
 
 TILE NOTATION
-A = normal borg tile
-B = green borg tile
-C = fancy borg tile
-D = normal klingon tile
-E = red kling tile
-F = fancy kling tile
+@ = LEVEL TRANSITION TILE
+
+BORG
+A = up borg tile
+B = left corner borg tile
+C = right corner borg tile
+D = up green borg tile
+E = left corner borg tile
+F = right corner borg tile
+G = borg chamber tile
+H = borg queen chamber tile
+I = borg assimilation tile
+J = borg energy tile
+
+KLINGON
+
 
 ENEMY NOTATION
 b = borg enemy

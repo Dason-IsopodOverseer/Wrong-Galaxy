@@ -394,7 +394,7 @@ public class Game extends Canvas {
  			
  			// if luke is at the bottom region of the level, detect tiles below
  			if (luke.y > (levelHeight - 200)) {
-	 			if (((LukeEntity) luke).getTileDirectlyBelow() == 'N') {
+	 			if (((LukeEntity) luke).getTileDirectlyBelow() == '@') {
 	 				lvl++;
 	 				if (lvl <= LASTLEVEL) {
 	 					goToNextLevel();

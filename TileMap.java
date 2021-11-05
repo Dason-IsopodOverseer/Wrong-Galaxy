@@ -5,7 +5,7 @@ public class TileMap {
 
 	private Sprite[][] tiles;
 	public ArrayList<String> tileConfig = new ArrayList(); // stores the configuration of different tiles after being read by mapReader
-	private Sprite tileSprite[] = new Sprite[6];
+	private Sprite tileSprite[] = new Sprite[100];
 	private Game game;
 	private int height = 0; // stores the height of the map
 	private int width = 0; // stores the width of the map
@@ -21,7 +21,7 @@ public class TileMap {
 		
 		tiles = new Sprite[width][height];
 		
-		// set sprites a and b to corresponding tile images
+		// set all tile sprites to corresponding tile images
 		for (int i = 0; i < 6; i++) {
 			tileSprite[i] = (SpriteStore.get()).getSprite("sprites/" + i + ".png");
 		}
@@ -56,30 +56,73 @@ public class TileMap {
 	            char ch = line.charAt(x);
 	            
 	            // check if the char represents tile A, B, N, etc.
-				if (ch == 'A') {
-					tiles[x][y] = tileSprite[1];
-				} else if (ch == 'B') {
-					tiles[x][y] = tileSprite[2];
-				} else if (ch == 'C') {
-					tiles[x][y] = tileSprite[3];
-				} else if (ch == 'N') {
-					tiles[x][y] = tileSprite[0];
-				} else if (ch == 'k') {
-					tiles[x][y] = null;
-					game.entities.add(new KlingonEntity(game, "kling", (x * tileSize), (y * tileSize)));
-				} else if (ch == 'm') {
-					tiles[x][y] = null;
-					game.entities.add(new KlingonEntity(game, "master", (x * tileSize), (y * tileSize)));
-				} else if (ch == 'b') {
-					tiles[x][y] = null;
-					game.entities.add(new BorgEntity(game, "borg", (x * tileSize), (y * tileSize)));
-				} else if (ch == 'q') {
-					tiles[x][y] = null;
-					game.entities.add(new BorgEntity(game, "queen", (x * tileSize), (y * tileSize)));
-				} 
-				else {
-					tiles[x][y] = null;
-				}
+	            switch (ch) {
+		            case '@':
+		            	tiles[x][y] = tileSprite[0];
+		            	break;
+		            case 'A':
+		            	tiles[x][y] = tileSprite[1];
+		            	break;
+		            case 'B':
+		            	tiles[x][y] = tileSprite[2];
+		            	break;
+		            case 'C':
+		            	tiles[x][y] = tileSprite[3];
+		            	break;
+		            case 'D':
+		            	tiles[x][y] = tileSprite[4];
+		            	break;
+		            case 'E':
+		            	tiles[x][y] = tileSprite[5];
+		            	break;
+		            case 'F':
+		            	tiles[x][y] = tileSprite[6];
+		            	break;
+		            case 'G':
+		            	tiles[x][y] = tileSprite[7];
+		            	break;
+		            case 'H':
+		            	tiles[x][y] = tileSprite[8];
+		            	break;
+		            case 'J':
+		            	tiles[x][y] = tileSprite[9];
+		            	break;
+		            case 'K':
+		            	tiles[x][y] = tileSprite[10];
+		            	break;
+		            case 'L':
+		            	tiles[x][y] = tileSprite[11];
+		            	break;
+		            case 'M':
+		            	tiles[x][y] = tileSprite[12];
+		            	break;
+		            case 'N':
+		            	tiles[x][y] = tileSprite[13];
+		            	break;
+		            case 'O':
+		            	tiles[x][y] = tileSprite[14];
+		            	break;
+		            case 'P':
+		            	tiles[x][y] = tileSprite[15];
+		            	break;
+		            case 'k':
+		            	tiles[x][y] = null;
+						game.entities.add(new KlingonEntity(game, "kling", (x * tileSize), (y * tileSize)));
+						break;
+		            case 'm':
+		            	tiles[x][y] = null;
+						game.entities.add(new KlingonEntity(game, "master", (x * tileSize), (y * tileSize)));
+						break;
+		            case 'b':
+		            	tiles[x][y] = null;
+						game.entities.add(new BorgEntity(game, "borg", (x * tileSize), (y * tileSize)));
+						break;
+		            case 'q':
+		            	tiles[x][y] = null;
+						game.entities.add(new BorgEntity(game, "queen", (x * tileSize), (y * tileSize)));
+		            default:
+		            	tiles[x][y] = null;
+	            }
 	        }
 	    }
 		return tiles;
